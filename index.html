@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clínica Nossa Família | Experiência Premium em Saúde</title>
+    <meta name="description"
+        content="Consultas e exames com tecnologia de ponta, especialistas de elite e o acolhimento que sua família merece. Clínica Nossa Família, Nepomuceno - MG.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;900&display=swap');
+
+        :root {
+            --primary: #482AFE;
+            --secondary: #00C1B3;
+            --accent: #00BBEF;
+            --text-main: #002536;
+            --bg-light: #F8FAFC;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-main);
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        .glass-light {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            box-shadow: 0 8px 32px rgba(0, 37, 54, 0.05);
+            transition: all 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+        }
+
+        .glass-light:hover {
+            transform: translateY(-8px);
+            background: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 20px 40px rgba(72, 42, 254, 0.1);
+            border-color: var(--secondary);
+        }
+
+        .btn-premium {
+            background: linear-gradient(135deg, var(--secondary), var(--accent));
+            color: white;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s ease;
+            box-shadow: 0 10px 20px rgba(0, 193, 179, 0.2);
+        }
+
+        .btn-premium:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 30px rgba(0, 193, 179, 0.4);
+            filter: brightness(1.05);
+        }
+
+        .float-soft {
+            animation: floatSoft 5s ease-in-out infinite;
+        }
+
+        @keyframes floatSoft {
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-15px);
+            }
+        }
+
+        #progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--secondary), var(--primary));
+            z-index: 100;
+        }
+
+        #mobile-menu {
+            transform: translateX(100%);
+            transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+            background: white;
+        }
+
+        #mobile-menu.open {
+            transform: translateX(0);
+        }
+
+        .text-gradient {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .bg-glow {
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(72, 42, 254, 0.05) 0%, transparent 70%);
+            filter: blur(100px);
+            z-index: -1;
+        }
+
+        /* Card Image Frame */
+        .card-frame {
+            width: 100%;
+            max-width: 460px;
+            aspect-ratio: 1.586 / 1;
+            border-radius: 2rem;
+            overflow: hidden;
+            box-shadow: 0 30px 60px rgba(0, 37, 54, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+        }
+
+        .card-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* Serviços card hover */
+        .servico-card {
+            transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+        }
+
+        .servico-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 40px rgba(72, 42, 254, 0.1);
+            border-color: var(--primary);
+        }
+    </style>
+</head>
+<link rel="icon" type="image/png" href="/assets/img/favicon.png">
+<body>
+
+    <div id="progress"></div>
+    <div class="bg-glow" style="top: -100px; right: -100px;"></div>
+
+    <!-- NAVBAR -->
+    <nav class="fixed w-full z-50 py-5 px-6 md:px-16 flex justify-between items-center transition-all duration-500"
+        id="navbar">
+        <div class="text-2xl font-black tracking-tighter flex items-center gap-2">
+
+
+        </div>
+        <img src="/assets/img/logo-cnf.png" alt="Clínica Nossa Família" class="h-8">
+        </div>
+
+        <div class="hidden lg:flex space-x-10 text-[11px] font-bold uppercase tracking-[0.2em] text-slate-500">
+            <a href="#home" class="hover:text-[#482AFE] transition">Home</a>
+            <a href="#sobre" class="hover:text-[#482AFE] transition">Sobre</a>
+            <a href="#servicos" class="hover:text-[#482AFE] transition">Serviços</a>
+            <a href="#estrutura" class="hover:text-[#482AFE] transition">Estrutura</a>
+            <a href="#cartao" class="text-[#00C1B3] font-black">O Cartão</a>
+        </div>
+
+        <div class="flex items-center gap-6">
+            <a href="https://api.whatsapp.com/send/?phone=5535998671677" target="_blank"
+                class="hidden sm:block btn-premium px-8 py-3.5 rounded-2xl font-black text-[10px] uppercase tracking-widest">Agendar
+                Consulta</a>
+            <button class="lg:hidden text-2xl text-[#002536]" id="menu-toggle">
+                <i class="fas fa-bars-staggered"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- MENU MOBILE -->
+    <div id="mobile-menu" class="fixed inset-0 z-[60] flex flex-col p-12 lg:hidden shadow-2xl">
+        <div class="flex justify-end mb-16">
+            <button class="text-4xl text-slate-400" id="menu-close">&times;</button>
+        </div>
+        <div class="flex flex-col gap-10 text-3xl font-black text-[#002536] uppercase italic">
+            <a href="#home" class="menu-link">Home</a>
+            <a href="#sobre" class="menu-link">Sobre</a>
+            <a href="#servicos" class="menu-link">Serviços</a>
+            <a href="#estrutura" class="menu-link">Estrutura</a>
+            <a href="#cartao" class="menu-link text-[#00C1B3]">O Cartão</a>
+        </div>
+    </div>
+
+    <!-- ======== 1. HOME ======== -->
+    <section id="home" class="min-h-screen flex items-center relative pt-20">
+        <div class="container mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
+            <div data-aos="fade-right" class="text-center lg:text-left">
+                <span
+                    class="inline-block px-4 py-1.5 rounded-full bg-blue-50 text-[#482AFE] font-bold tracking-[0.2em] uppercase text-[10px] mb-6">Família cuidando de Família. 
+                        </span>
+                <h1 class="text-5xl md:text-6xl lg:text-8xl font-black leading-[1.05] mb-8 text-[#002536]">
+                    O cuidado que<br><span class="text-gradient">sua família precisa.</span>
+                </h1>
+                <p class="text-lg md:text-xl text-slate-500 mb-12 max-w-lg mx-auto lg:mx-0 leading-relaxed font-light">
+                    Consultas e exames com tecnologia de ponta, especialistas de elite e o acolhimento que sua família
+                    merece.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center lg:justify-start gap-5">
+                    <a href="https://api.whatsapp.com/send/?phone=5535998671677" target="_blank"
+                        class="btn-premium px-12 py-5 rounded-2xl font-black uppercase tracking-[0.2em] text-xs text-center">
+                        Agendar Agora
+                    </a>
+                    </button>
+                    <a href="#servicos"
+                        class="px-12 py-5 bg-white border border-slate-200 rounded-2xl font-bold text-xs uppercase tracking-widest text-slate-600 hover:bg-slate-50 transition shadow-sm text-center">
+                        Ver Especialidades
+                    </a>
+                </div>
+            </div>
+
+            <div class="relative" data-aos="zoom-in" data-aos-delay="200">
+                <div class="float-soft glass-light p-4 md:p-6 rounded-[4rem] max-w-md mx-auto relative z-10">
+                    <div
+                        class="w-full aspect-[4/5] bg-slate-200 rounded-[3.5rem] overflow-hidden relative shadow-inner">
+                        <img src="/assets/img/medico-hero.jpg" alt="" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-white/40 to-transparent"></div>
+                    </div>
+                </div>
+                <div class="absolute -top-10 -left-10 w-32 h-32 bg-[#00C1B3] opacity-10 blur-3xl"></div>
+                <div class="absolute -bottom-10 -right-10 w-48 h-48 bg-[#482AFE] opacity-10 blur-3xl"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======== 2. SOBRE ======== -->
+    <section id="sobre" class="py-32 md:py-48 bg-white relative overflow-hidden">
+        <div class="container mx-auto px-6 grid lg:grid-cols-2 gap-20 items-center">
+            <div class="order-2 lg:order-1" data-aos="fade-right">
+                <span class="text-[#482AFE] font-bold tracking-[0.5em] uppercase mb-6 block text-[10px]">Nossa
+                    história</span>
+                <h2 class="text-4xl md:text-5xl font-black mb-8 text-[#002536] leading-tight uppercase italic">
+                    Propósito que gera <span class="text-[#00C1B3]">confiança.</span>
+                </h2>
+                <p class="text-slate-500 text-lg leading-relaxed mb-10">
+                    A Clínica Nossa Família nasceu com o propósito de oferecer saúde de ponta. Facilitando o acesso a especialistas renomados, exames de 
+                    alta tecnologia e um atendimento de qualidade. Cuidamos da sua saúde como se fosse da nossa família, porque para nós, cada paciente é parte da nossa história.
+                </p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                    <div
+                        class="p-8 rounded-3xl bg-slate-50 border border-slate-100 hover:border-[#00C1B3] transition-colors">
+                        <i class="fas fa-heart-pulse text-3xl text-[#00C1B3] mb-4"></i>
+                        <h4 class="font-black text-[#002536] text-xl mb-1 uppercase">Habilitados</h4>
+                        <p class="text-sm text-slate-400">Médicos parceiros com formação reconhecida.</p>
+                    </div>
+                    <div
+                        class="p-8 rounded-3xl bg-slate-50 border border-slate-100 hover:border-[#482AFE] transition-colors">
+                        <i class="fas fa-microscope text-3xl text-[#482AFE] mb-4"></i>
+                        <h4 class="font-black text-[#002536] text-xl mb-1 uppercase">Acurácia</h4>
+                        <p class="text-sm text-slate-400">Tecnologia avançada em cada diagnóstico.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="order-1 lg:order-2 relative" data-aos="fade-left">
+                <div class="glass-light p-12 md:p-20 rounded-[4rem] text-center">
+                    <p class="text-2xl md:text-4xl font-light italic leading-tight text-[#002536]">
+                        "Família cuidando <span class="font-black text-[#482AFE]">de</span> família."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======== 3. O QUE A CLÍNICA OFERECE ======== -->
+    <section id="servicos" class="py-32 md:py-48 bg-slate-50 relative overflow-hidden">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-20" data-aos="fade-up">
+                <span
+                    class="text-[#482AFE] font-bold tracking-[0.5em] uppercase mb-4 block text-[10px]">Alguns Especialidades</span>
+                <h2 class="text-5xl md:text-7xl font-black uppercase text-[#002536] italic leading-tight">
+                    O que oferecemos
+                </h2>
+                <p class="text-slate-400 mt-6 text-lg font-light max-w-xl mx-auto">
+                    Cuidado completo para cada fase da vida, reunido em um só lugar.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Card Serviço -->
+                <div class="servico-card bg-white border border-slate-100 rounded-3xl p-10" data-aos="fade-up">
+                    <div class="w-14 h-14 rounded-2xl bg-[#00C1B3]/10 flex items-center justify-center mb-6">
+                        <i class="fas fa-stethoscope text-2xl text-[#00C1B3]"></i>
+                    </div>
+                    <h4 class="font-black text-[#002536] text-xl uppercase mb-3">Clínica Geral</h4>
+                    <p class="text-slate-400 text-sm leading-relaxed">Atendimento primário e acompanhamento contínuo da
+                        sua saúde com profissionais experientes.</p>
+                </div>
+
+                <div class="servico-card bg-white border border-slate-100 rounded-3xl p-10" data-aos="fade-up"
+                    data-aos-delay="100">
+                    <div class="w-14 h-14 rounded-2xl bg-[#482AFE]/10 flex items-center justify-center mb-6">
+                        <i class="fas fa-baby text-2xl text-[#482AFE]"></i>
+                    </div>
+                    <h4 class="font-black text-[#002536] text-xl uppercase mb-3">Pediatria</h4>
+                    <p class="text-slate-400 text-sm leading-relaxed">Cuidado especializado para crianças e
+                        adolescentes, do acompanhamento do crescimento à saúde preventiva.</p>
+                </div>
+
+                <div class="servico-card bg-white border border-slate-100 rounded-3xl p-10" data-aos="fade-up"
+                    data-aos-delay="200">
+                    <div class="w-14 h-14 rounded-2xl bg-[#00BBEF]/10 flex items-center justify-center mb-6">
+                        <i class="fas fa-venus text-2xl text-[#00BBEF]"></i>
+                    </div>
+                    <h4 class="font-black text-[#002536] text-xl uppercase mb-3">Ginecologia</h4>
+                    <p class="text-slate-400 text-sm leading-relaxed">Saúde da mulher com atenção humanizada em todas as
+                        fases da vida.</p>
+                </div>
+
+                <div class="servico-card bg-white border border-slate-100 rounded-3xl p-10" data-aos="fade-up"
+                    data-aos-delay="100">
+                    <div class="w-14 h-14 rounded-2xl bg-[#00C1B3]/10 flex items-center justify-center mb-6">
+                        <i class="fas fa-heart text-2xl text-[#00C1B3]"></i>
+                    </div>
+                    <h4 class="font-black text-[#002536] text-xl uppercase mb-3">Endocrinologia</h4>
+                    <p class="text-slate-400 text-sm leading-relaxed">Avaliação e acompanhamento das doenças endócrinas com tecnologia de ponta.</p>
+                </div>
+
+                <div class="servico-card bg-white border border-slate-100 rounded-3xl p-10" data-aos="fade-up"
+                    data-aos-delay="200">
+                    <div class="w-14 h-14 rounded-2xl bg-[#482AFE]/10 flex items-center justify-center mb-6">
+                        <i class="fas fa-flask text-2xl text-[#482AFE]"></i>
+                    </div>
+                    <h4 class="font-black text-[#002536] text-xl uppercase mb-3">Laboratório</h4>
+                    <p class="text-slate-400 text-sm leading-relaxed">Exames laboratoriais com precisão e agilidade no
+                        resultado para diagnóstico rápido.</p>
+                </div>
+
+                <div class="servico-card bg-white border border-slate-100 rounded-3xl p-10" data-aos="fade-up"
+                    data-aos-delay="300">
+                    <div class="w-14 h-14 rounded-2xl bg-[#00BBEF]/10 flex items-center justify-center mb-6">
+                        <i class="fas fa-x-ray text-2xl text-[#00BBEF]"></i>
+                    </div>
+                    <h4 class="font-black text-[#002536] text-xl uppercase mb-3">Imagem</h4>
+                    <p class="text-slate-400 text-sm leading-relaxed">Ultrassonografia e exames de imagem com tecnologia
+                        para laudos de alta qualidade.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ======== 4. ESTRUTURA FÍSICA ======== -->
+    <section id="estrutura" class="py-32 md:py-48 bg-white">
+        <div class="container mx-auto px-6 text-center md:text-left">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-24 gap-8" data-aos="fade-up">
+                <div class="max-w-2xl">
+                    <span class="text-[#482AFE] font-bold tracking-[0.5em] uppercase mb-4 block text-[10px]">Conforto &
+                        Eficiência</span>
+                    <h2 class="text-5xl md:text-7xl font-black uppercase text-[#002536] mb-4 italic">Estrutura</h2>
+                    <p class="text-slate-400 font-bold tracking-[0.5em] uppercase text-xs">Planejada para você e sua
+                        família</p>
+                </div>
+                <div
+                    class="text-[#00C1B3] font-black uppercase tracking-widest text-xs border-b-2 border-[#00C1B3] pb-2 cursor-pointer">
+                    Tour Virtual 360</div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <div class="group" data-aos="fade-up">
+                    <div class="glass-light overflow-hidden rounded-[3rem] mb-8 aspect-square relative p-2">
+                        <img src="/assets/img/estrutura-recepcao.jpg"
+                            class="w-full h-full object-cover rounded-[2.5rem] group-hover:scale-110 transition duration-1000 bg-slate-200">
+                    </div>
+                    <h4 class="text-2xl font-black uppercase text-[#002536] mb-3">Recepção Flow</h4>
+                    <p class="text-slate-500 text-sm leading-relaxed px-4">Processos internos ágeis planejados para
+                        oferecer fluidez e agilidade no seu atendimento.</p>
+                </div>
+                <div class="group" data-aos="fade-up" data-aos-delay="200">
+                    <div class="glass-light overflow-hidden rounded-[3rem] mb-8 aspect-square relative p-2">
+                        <img src="/assets/img/estrutura-tecnologia.jpg"
+                            class="w-full h-full object-cover rounded-[2.5rem] group-hover:scale-110 transition duration-1000 bg-slate-200">
+                    </div>
+                    <h4 class="text-2xl font-black uppercase text-[#002536] mb-3">Tecnologia</h4>
+                    <p class="text-slate-500 text-sm leading-relaxed px-4">Equipamentos modernos para exames de alta
+                        complexidade com laudos precisos.</p>
+                </div>
+                <div class="group" data-aos="fade-up" data-aos-delay="400">
+                    <div class="glass-light overflow-hidden rounded-[3rem] mb-8 aspect-square relative p-2">
+                        <img src="/assets/img/estrutura-conforto.jpg"
+                            class="w-full h-full object-cover rounded-[2.5rem] group-hover:scale-110 transition duration-1000 bg-slate-200">
+                    </div>
+                    <h4 class="text-2xl font-black uppercase text-[#002536] mb-3">Conforto</h4>
+                    <p class="text-slate-500 text-sm leading-relaxed px-4">Cada detalhe planejado para oferecer
+                        segurança, privacidade e excelência.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======== 5. CARTÃO DE BENEFÍCIO ======== -->
+    <section id="cartao" class="py-32 md:py-48 bg-slate-50 overflow-hidden">
+        <div class="container mx-auto px-6">
+            <div
+                class="relative bg-gradient-to-br from-white to-slate-50 p-10 md:p-24 rounded-[4rem] border border-slate-100 shadow-2xl flex flex-col lg:flex-row items-center gap-20">
+
+                <div class="lg:w-1/2" data-aos="fade-right">
+                    <span class="text-[#482AFE] font-bold tracking-[0.5em] uppercase mb-6 block text-[10px]">Benefício
+                        Exclusivo</span>
+                    <h2 class="text-5xl md:text-7xl font-black text-[#002536] mb-8 italic uppercase leading-none">
+                        Cartão de<br><span class="text-gradient">Benefício.</span>
+                    </h2>
+                    <p class="text-slate-500 text-lg md:text-xl mb-12 font-light">
+                        Mais economia, mais acesso e mais organização para sua saúde. O plano inteligente para quem
+                        busca previsibilidade financeira.
+                    </p>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+                        <div class="flex items-center gap-4 text-sm font-bold uppercase tracking-widest text-[#002536]">
+                            <div class="w-10 h-10 rounded-full bg-[#00C1B3]/10 flex items-center justify-center">
+                                <i class="fas fa-check text-[#00C1B3]"></i>
+                            </div>
+                            Descontos Reais
+                        </div>
+                        <div class="flex items-center gap-4 text-sm font-bold uppercase tracking-widest text-[#002536]">
+                            <div class="w-10 h-10 rounded-full bg-[#482AFE]/10 flex items-center justify-center">
+                                <i class="fas fa-users text-[#482AFE]"></i>
+                            </div>
+                            Rede Parceira
+                        </div>
+                    </div>
+
+                    <a href="https://cartaonossafamilia.plano10.com.br/#Planos" target="_blank"
+                        class="btn-premium w-full sm:w-auto px-12 py-6 rounded-2xl font-black text-xs uppercase tracking-[0.3em] shadow-2xl text-center">
+                        Assinar Meu Cartão
+                    </a>
+
+                    <a href="https://cnf-clube-vantagens.base44.app/" target="_blank"
+                        class="w-full sm:w-auto px-12 py-6 rounded-2xl font-black text-xs uppercase tracking-[0.3em] border-2 border-[#482AFE] text-[#482AFE] hover:bg-[#482AFE] hover:text-white transition-all duration-300 text-center">
+                        Simular Economia
+                    </a>
+                </div>
+
+                <!-- Moldura do Cartão — só encaixe a imagem aqui -->
+                <div class="lg:w-1/2 flex justify-center" data-aos="fade-left">
+                    <div class="card-frame">
+                        <img src="/assets/img/cartao-beneficio.png" alt="Cartão de Benefício Nossa Família">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-24 bg-white text-center px-6 border-t border-slate-100">
+        <div class="container mx-auto">
+            <img src="/assets/img/logo-cnf.png" alt="Clínica Nossa Família" class="h-8 mx-auto mb-10">
+            <div class="flex justify-center gap-10 mb-12 text-slate-400">
+                <a href="https://www.instagram.com/clinicanossafamiliaoficial/" class="hover:text-[#482AFE] transition text-2xl"><i class="fab fa-instagram"></i></a>
+                <a href="https://wa.me/5535999999999" class="hover:text-[#00C1B3] transition text-2xl"><i class="fab fa-whatsapp"></i></a>
+            </div>
+            <p class="text-slate-400 text-[10px] uppercase tracking-[0.5em] leading-loose">
+                Nepomuceno, MG • Experiência Digital by Estúdio SM7<br>
+                © 2026 Clínica Nossa Família | Todos os direitos reservados
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        AOS.init({ duration: 1000, once: false });
+
+        window.onscroll = function () {
+            let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            let scrolled = (winScroll / height) * 100;
+            document.getElementById("progress").style.width = scrolled + "%";
+
+            const nav = document.getElementById("navbar");
+            if (window.scrollY > 30) {
+                nav.classList.add("bg-white/90", "backdrop-blur-xl", "py-4", "shadow-sm");
+                nav.classList.remove("py-5");
+            } else {
+                nav.classList.remove("bg-white/90", "backdrop-blur-xl", "py-4", "shadow-sm");
+                nav.classList.add("py-5");
+            }
+        };
+
+        const menuToggle = document.getElementById('menu-toggle');
+        const menuClose = document.getElementById('menu-close');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuToggle.addEventListener('click', () => mobileMenu.classList.add('open'));
+        menuClose.addEventListener('click', () => mobileMenu.classList.remove('open'));
+        document.querySelectorAll('.menu-link').forEach(link => {
+            link.addEventListener('click', () => mobileMenu.classList.remove('open'));
+        });
+    </script>
+</body>
+
+</html>
