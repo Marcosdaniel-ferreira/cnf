@@ -100,6 +100,7 @@
         .text-gradient {
             background: linear-gradient(135deg, var(--primary), var(--secondary));
             -webkit-background-clip: text;
+            background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
@@ -435,15 +436,16 @@
                         </div>
                     </div>
 
-                    <a href="https://cartaonossafamilia.plano10.com.br/#Planos" target="_blank"
-                        class="btn-premium w-full sm:w-auto px-12 py-6 rounded-2xl font-black text-xs uppercase tracking-[0.3em] shadow-2xl text-center">
-                        Assinar Meu Cartão
-                    </a>
-
-                    <a href="https://cnf-clube-vantagens.base44.app/" target="_blank"
-                        class="w-full sm:w-auto px-12 py-6 rounded-2xl font-black text-xs uppercase tracking-[0.3em] border-2 border-[#482AFE] text-[#482AFE] hover:bg-[#482AFE] hover:text-white transition-all duration-300 text-center">
-                        Simular Economia
-                    </a>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="https://cartaonossafamilia.plano10.com.br/#Planos" target="_blank"
+                            class="btn-premium w-full sm:w-auto px-12 py-6 rounded-2xl font-black text-xs uppercase tracking-[0.3em] shadow-2xl text-center">
+                            Assinar Meu Cartão
+                        </a>
+                        <a href="https://cnf-clube-vantagens.base44.app/" target="_blank"
+                            class="w-full sm:w-auto px-12 py-6 rounded-2xl font-black text-xs uppercase tracking-[0.3em] border-2 border-[#482AFE] text-[#482AFE] hover:bg-[#482AFE] hover:text-white transition-all duration-300 text-center">
+                            Simular Economia
+                        </a>
+                    </div>
                 </div>
 
                 <!-- Moldura do Cartão — só encaixe a imagem aqui -->
