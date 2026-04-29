@@ -23,7 +23,8 @@
             --bg-light: #F8FAFC;
         }
 
-        body {
+        body,
+        html {
             font-family: 'Outfit', sans-serif;
             background-color: var(--bg-light);
             color: var(--text-main);
@@ -109,6 +110,7 @@
             background: radial-gradient(circle, rgba(72, 42, 254, 0.05) 0%, transparent 70%);
             filter: blur(100px);
             z-index: -1;
+            max-width: 100vw;
         }
 
         /* Card Image Frame */
@@ -142,6 +144,7 @@
     </style>
 </head>
 <link rel="icon" type="image/png" href="assets/img/favicon.png">
+
 <body>
 
     <div id="progress"></div>
@@ -194,10 +197,11 @@
         <div class="container mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
             <div data-aos="fade-right" class="text-center lg:text-left">
                 <span
-                    class="inline-block px-4 py-1.5 rounded-full bg-blue-50 text-[#482AFE] font-bold tracking-[0.2em] uppercase text-[10px] mb-6">Família cuidando de Família. 
-                        </span>
+                    class="inline-block px-4 py-1.5 rounded-full bg-blue-50 text-[#482AFE] font-bold tracking-[0.2em] uppercase text-[10px] mb-6">Família
+                    cuidando de Família.
+                </span>
                 <h1 class="text-5xl md:text-6xl lg:text-8xl font-black leading-[1.05] mb-8 text-[#002536]">
-                    O cuidado que<br><span class="text-gradient">sua família precisa.</span>
+                    O cuidado que<br><span class="text-gradient">sua família merece.</span>
                 </h1>
                 <p class="text-lg md:text-xl text-slate-500 mb-12 max-w-lg mx-auto lg:mx-0 leading-relaxed font-light">
                     Consultas e exames com tecnologia de ponta, especialistas de elite e o acolhimento que sua família
@@ -241,8 +245,10 @@
                     Propósito que gera <span class="text-[#00C1B3]">confiança.</span>
                 </h2>
                 <p class="text-slate-500 text-lg leading-relaxed mb-10">
-                    A Clínica Nossa Família nasceu com o propósito de oferecer saúde de ponta. Facilitando o acesso a especialistas renomados, exames de 
-                    alta tecnologia e um atendimento de qualidade. Cuidamos da sua saúde como se fosse da nossa família, porque para nós, cada paciente é parte da nossa história.
+                    A Clínica Nossa Família nasceu com o propósito de oferecer saúde de ponta. Facilitando o acesso a
+                    especialistas renomados, exames de
+                    alta tecnologia e um atendimento de qualidade. Cuidamos da sua saúde como se fosse da nossa família,
+                    porque para nós, cada paciente é parte da nossa história.
                 </p>
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
                     <div
@@ -273,13 +279,13 @@
     <section id="servicos" class="py-32 md:py-48 bg-slate-50 relative overflow-hidden">
         <div class="container mx-auto px-6">
             <div class="text-center mb-20" data-aos="fade-up">
-                <span
-                    class="text-[#482AFE] font-bold tracking-[0.5em] uppercase mb-4 block text-[10px]">Alguns Especialidades</span>
+                <span class="text-[#482AFE] font-bold tracking-[0.5em] uppercase mb-4 block text-[10px]">Algumas
+                    Especialidades</span>
                 <h2 class="text-5xl md:text-7xl font-black uppercase text-[#002536] italic leading-tight">
                     O que oferecemos
                 </h2>
                 <p class="text-slate-400 mt-6 text-lg font-light max-w-xl mx-auto">
-                    Cuidado completo para cada fase da vida, reunido em um só lugar.
+                    + de 15 Especialistas cuidando de forma completa cada fase da vida, reunido em um só lugar.
                 </p>
             </div>
 
@@ -321,7 +327,8 @@
                         <i class="fas fa-heart text-2xl text-[#00C1B3]"></i>
                     </div>
                     <h4 class="font-black text-[#002536] text-xl uppercase mb-3">Endocrinologia</h4>
-                    <p class="text-slate-400 text-sm leading-relaxed">Avaliação e acompanhamento das doenças endócrinas com tecnologia de ponta.</p>
+                    <p class="text-slate-400 text-sm leading-relaxed">Avaliação e acompanhamento das doenças endócrinas
+                        com tecnologia de ponta.</p>
                 </div>
 
                 <div class="servico-card bg-white border border-slate-100 rounded-3xl p-10" data-aos="fade-up"
@@ -455,8 +462,10 @@
         <div class="container mx-auto">
             <img src="assets/img/logo-cnf.png" alt="Clínica Nossa Família" class="h-8 mx-auto mb-10">
             <div class="flex justify-center gap-10 mb-12 text-slate-400">
-                <a href="https://www.instagram.com/clinicanossafamiliaoficial/" class="hover:text-[#482AFE] transition text-2xl"><i class="fab fa-instagram"></i></a>
-                <a href="https://wa.me/5535999999999" class="hover:text-[#00C1B3] transition text-2xl"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://www.instagram.com/clinicanossafamiliaoficial/"
+                    class="hover:text-[#482AFE] transition text-2xl"><i class="fab fa-instagram"></i></a>
+                <a href="https://wa.me/5535999999999" class="hover:text-[#00C1B3] transition text-2xl"><i
+                        class="fab fa-whatsapp"></i></a>
             </div>
             <p class="text-slate-400 text-[10px] uppercase tracking-[0.5em] leading-loose">
                 Nepomuceno, MG • Experiência Digital by Estúdio SM7<br>
